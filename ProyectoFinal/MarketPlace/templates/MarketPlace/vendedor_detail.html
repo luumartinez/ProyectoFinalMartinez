@@ -1,0 +1,18 @@
+{% extends "MarketPlace/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %} 
+
+<h3><U> Detalles del vendedor </U></h3>
+   <ul>
+
+       <p><B>Nombre del vendedor:</B> {{vendedor.nombre_apellido}} </p>
+       <p><B>Mail:</B> {{vendedor.mail}} </p>
+       <p><B>Codigo interno:</B> {{vendedor.codigo_interno}} </p>
+       <p>
+        <a href="{% url 'ListVendedor' %}">Regresar</a>
+       </p>
+     
+   </ul>
+{% endblock %}

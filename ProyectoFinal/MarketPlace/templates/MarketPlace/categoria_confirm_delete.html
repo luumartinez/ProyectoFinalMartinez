@@ -1,0 +1,15 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form method="post">{% csrf_token %}
+    
+    ¿Estas seguro que deseas borrar la categoria "{{categoria.tipo}}"?
+    <input type="submit" value="Eliminar">
+
+ </form>
+ <a href="{% url 'ListCategoria' %}">Cancelar</a>
+
+ {% endblock %}

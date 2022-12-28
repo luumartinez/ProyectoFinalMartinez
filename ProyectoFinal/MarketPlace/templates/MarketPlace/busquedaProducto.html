@@ -1,0 +1,14 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="/MarketPlace/buscarp/" method="GET">{% csrf_token %}
+        Ingrese el producto que desea buscar: 
+        <input type="text" name="nombre_producto" id="nombre_producto">
+        <input type="submit" value="Buscar" />
+    </form>
+    <a href="{% url 'ListProduct' %}">Cancelar</a>
+
+{% endblock %}

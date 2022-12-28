@@ -1,0 +1,15 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="/MarketPlace/buscarv/" method="GET">{% csrf_token %}
+        Nombre y apellido del/la vendedor/a: 
+        <input type="text" name="nombre_apellido" id="nombre_apellido">
+        <input type="submit" value="Buscar" />
+    </form>
+    <a href="{% url 'ListVendedor' %}">Cancelar</a>
+
+
+{% endblock %}

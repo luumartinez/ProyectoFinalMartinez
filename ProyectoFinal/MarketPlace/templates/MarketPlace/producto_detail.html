@@ -1,0 +1,18 @@
+{% extends "MarketPlace/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %} 
+
+<h3><U> Detalles del producto </U></h3>
+   <ul>
+
+       <p><B>Producto:</B> {{producto.nombre_producto}} </p>
+       <p><B>Precio:</B> {{producto.precio}} </p>
+       <p><B>Disponibilidad:</B> {{producto.stock}} </p>
+       <p>
+        <a href="{% url 'ListProduct' %}">Regresar</a>
+       </p>
+     
+   </ul>
+{% endblock %}

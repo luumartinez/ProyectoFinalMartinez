@@ -1,0 +1,18 @@
+{% extends "MarketPlace/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %} 
+
+<h3><U> Detalles de categorias </U></h3>
+   <ul>
+
+       <p><B>Tipo: </B> {{categoria.tipo}} </p>
+       <p><B>Estado:</B> {{categoria.estado}} </p>
+       <p><B>Tamaño: </B> {{categoria.tamanio}} </p>
+       <p>
+        <a href="{% url 'ListCategoria' %}">Regresar</a>
+       </p>
+     
+   </ul>
+{% endblock %}

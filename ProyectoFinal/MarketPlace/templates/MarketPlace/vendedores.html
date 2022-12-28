@@ -1,0 +1,27 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1><U>Vendedores</U></h1>
+
+<p>Ingresar los datos de registro del vendedor:</p>
+    <br>
+    <form action=""    method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+    </br>
+<p>Desea buscar un vendedor? Click aca:
+  <a class="btn btn-primary" href="{% url 'BusquedaVendedor' %}">Buscar</a>
+</p>
+<p>Para ver todos los vendedores:
+  <a class="btn btn-primary" href="{% url 'ListVendedor' %}">Lista completa</a>
+</p>
+Para crear un/a nuevo vendedor/a:
+  <a class="btn btn-primary" href="{% url 'NewVendedor' %}">Crear</a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Resultado de busqueda Categoria</h1>
+   {%for categoria in categorias%}
+     <p><B>Tipo: </B> {{categoria.tipo}} </p>
+     <p><B>Estado: </B>{{categoria.estado}}</p>
+     <p><B>Tamaño: </B>{{categoria.tamanio}}</p>
+   {%endfor%}
+   <a href="{% url 'ListCategoria' %}">Regresar</a>
+{% endblock %}

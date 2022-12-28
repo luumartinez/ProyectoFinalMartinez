@@ -1,0 +1,27 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1><U>Categorias</U></h1>
+
+Agrega una categoria:
+    <br>
+    <form action=""    method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+<p>Desea buscar una categoria? Click aca:
+    <a class="btn btn-primary" href="{% url 'BusquedaCategoria' %}">Buscar</a>
+</p>
+<p>Para ver todas las categorias disponibles:
+    <a class="btn btn-primary" href="{% url 'ListCategoria' %}">Lista completa</a>
+</p>
+Para crear una categoria:
+    <a class="btn btn-primary" href="{% url 'NewCategoria' %}">Crear</a>
+
+{% endblock %}

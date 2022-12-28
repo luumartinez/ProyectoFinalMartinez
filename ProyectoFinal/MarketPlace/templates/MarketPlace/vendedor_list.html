@@ -1,0 +1,21 @@
+{% extends "MarketPlace/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %} 
+
+<h3><U> Lista de Vendedores </U></h3>
+   <ul>
+    
+    {% for vendedor in object_list %} 
+
+       <p><B>Vendedor:</B> {{vendedor.nombre_apellido}} </p>
+       <p>
+        <a href="{% url 'DetailVendedor' vendedor.id %}">Ver</a>
+        <a href="{% url 'EditVendedor' vendedor.id %}">Editar</a>
+        <a href="{% url 'DeleteVendedor' vendedor.id %}">Borrar</a>
+       </p>
+     
+    {%endfor%}
+   </ul>
+{% endblock %}

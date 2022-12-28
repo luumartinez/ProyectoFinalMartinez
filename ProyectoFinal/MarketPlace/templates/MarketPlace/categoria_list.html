@@ -1,0 +1,21 @@
+{% extends "MarketPlace/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %} 
+
+<h3><U> Todas las categorias </U></h3>
+   <ul>
+    
+    {% for categoria in object_list %} 
+
+       <p><B>Categoria:</B> {{categoria.tipo}} </p>
+       <p>
+        <a href="{% url 'DetailCategoria' categoria.id %}">Ver</a>
+        <a href="{% url 'EditCategoria' categoria.id %}">Editar</a>
+        <a href="{% url 'DeleteCategoria' categoria.id %}">Borrar</a>
+       </p>
+     
+    {%endfor%}
+   </ul>
+{% endblock %}

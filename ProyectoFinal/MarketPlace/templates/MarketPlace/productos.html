@@ -1,0 +1,26 @@
+{% extends "MarketPlace/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1><U>Productos</U></h1>
+
+Ingrese un producto que desea vender:
+    <br>
+    <form action=""    method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+<p>Desea buscar un producto? Click aca:
+  <a class="btn btn-primary" href="{% url 'BusquedaProducto' %}">Buscar</a>
+</p>
+<p>Para ver todos los productos disponibles:
+  <a class="btn btn-primary" href="{% url 'ListProduct' %}">Lista completa</a>
+</p>
+Para crear un producto:
+  <a class="btn btn-primary" href="{% url 'NewProduct' %}">Crear</a>
+
+{% endblock %}
